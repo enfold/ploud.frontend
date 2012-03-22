@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head tal:define="dummy view.include('bootstrap');">
+        <!-- Meta -->
+        <meta charset="utf-8" />
+        <title dir="ltr">Ploud</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!-- Icon -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <!-- CSS -->
+        <tal:block content="structure view.render_includes()" />
+        <link rel="stylesheet" href="${request.static_url('ploud.frontend:assets/_css/global.css')}" media="all" />
+    </head>
+
+    <body>
+        <div class="container" dir="ltr">
+
+            <header style="margin-bottom: 4em">
+                <div class="access accessibly-hide">
+                    <div class="content-inner">
+                        <ul>
+                            <li><a href="#main-content">Skip to Content</a></li>
+                        </ul>
+                    </div>
+                </div><!-- End .access -->
+      
+                <div class="global-header">
+                    <div class="content-inner">
+                        <ul class="global-nav ~hide" tal:condition="not view.isanon">
+                            <li class="principal" tal:content="view.principal">{{ view.principal }}</li>
+                            <li class="membership"><a href="/membership.html">Membership</a></li>
+                            <li class="dashboard"><a href="/dashboard.html">Dashboard</a></li>
+                            <li class="themegallery"><a href="/themes/">Themes</a></li>
+                            <li class="management" tal:condition="view.manager"><a href="/ptah-manage/">Management</a></li>
+                            <li class="logout"><a href="/logout.html">Logout</a></li>
+                        </ul>
+                        <ul class="global-nav ~hide" tal:condition="view.isanon">
+                            <li class="membership"><a href="/membership.html">Membership</a></li>
+                            <li class="themegallery"><a href="/themes/">Themes</a></li>
+                            <li class="login"><a href="/index.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div><!-- End .global-header -->
+
+                <div class="header grid_16">
+                    <div class="content-inner clear-fix">
+                        <div class="logo grid_6 alpha">
+                            <a href="/index.html" title="Ploud">
+                                <img src="${request.static_url('ploud.frontend:assets/_img-ui/ploud.png')}" alt="Ploud"/>
+                            </a>
+                            <span class="release-type">Beta</span>
+                        </div>
+                    </div>
+                </div><!-- End .header -->
+            </header>
+
+    <!-- Main Content Block -->
+    <div class="row">
+    ${structure: wrapped_content}
+	</div>
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+	<div class="content-inner">
+          <p><small class="copyright">&copy; 2011, <a href="http://www.enfoldsystems.com/" rel="external">Enfold Systems</a>, Inc. &mdash; The Plone Experts.</small></p>
+          <ul class="inline">
+            <li class="terms-of-service"><a href="/terms-of-service.html" class="colorbox modal-cta modal-cta-find:terms-of-service" data-rel="dialog">Terms and Conditions</a></li>
+            <li class="privacy-policy"><a href="/privacy-policy.html" class="colorbox modal-cta modal-cta-find:privacy-policy" data-rel="dialog">Privacy Policy</a></li>
+          </ul>
+	</div>
+      </div><!-- End .footer -->
+    </footer>
+  </div>
+  
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26600834-1']);
+  _gaq.push(['_setDomainName', '.ploud.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+</body>
+
+</html>
