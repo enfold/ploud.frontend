@@ -10,17 +10,17 @@
   <body>
     <div class="container">
       <div class="page-header">
-	<h1>Ploud Login Service</h1>
+        <h1>Ploud Login Service</h1>
       </div>
 
       <div class="row">
-	<div class="span8 offset4 columns">
-	  <h3>Login to ${request.matchdict['site']}</h3>
+        <div class="span8 offset4 columns">
+          <h3>Login to ${request.matchdict['site']}</h3>
 
-	  ${structure: view.render_messages()}
+          ${structure: view.render_messages()}
 
-	  ${structure: wrapped_content}
-	</div>
+          ${structure: wrapped_content}
+        </div>
       </div>
     </div>
   </body>

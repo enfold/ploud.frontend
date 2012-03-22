@@ -9,36 +9,36 @@
       <td>${context.id}</td>
     </tr>
       <tr>
-	<td>Email</td>
-	<td>${context.email}</td>
+        <td>Email</td>
+        <td>${context.email}</td>
       </tr>
       <tr>
-	<td>Membership</td>
-	<td>${context.type}</td>
+        <td>Membership</td>
+        <td>${context.type}</td>
       </tr>
       <tr>
-	<td>Joined</td>
-	<td>${view.format.datetime(context.join_date)}</td>
+        <td>Joined</td>
+        <td>${view.format.datetime(context.join_date)}</td>
       </tr>
       <tr>
-	<td>Number of sites</td>
-	<td>${view.sites}</td>
+        <td>Number of sites</td>
+        <td>${view.sites}</td>
       </tr>
       <tr>
-	<td>Database size</td>
-	<td>${view.dbsize}</td>
+        <td>Database size</td>
+        <td>${view.dbsize}</td>
       </tr>
       <tr>
-	<td>Bandwidth</td>
-	<td>${view.bandwidth}</td>
+        <td>Bandwidth</td>
+        <td>${view.bandwidth}</td>
       </tr>
     </table>
   </div>
-  
+
 <div class="span7">
   <h4>Change membership type</h4>
   <tal:block tal:content="structure view.snippet('form-view', view)" />
-  
+
   <h4>Change user password</h4>
   ${structure: view.snippet('form-view', view.change_password)}
 </div>
@@ -47,7 +47,7 @@
   <h3><a href="http://${site['host']}">${site['host']}</a>
     (<a target="_blank" href="../login?id=${site['site_id']}">Login</a>)
   </h3>
-    
+
   <table class="zebra-striped">
     <tr>
       <td>Site id/type</td>
@@ -73,6 +73,6 @@
       <td>${site['bandwidth']}</td>
     </tr>
   </table>
-    
+
   <tal:block content="structure site['form'].render()" />
 </div>

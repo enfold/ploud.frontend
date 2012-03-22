@@ -59,6 +59,17 @@ ptah.register_settings(
         default = ('demo', 'desktop', 'enfold','static',
                    'ww','www', 'wwww', 'support', 'login', 'rest',)),
 
+    ptah.form.BoolField(
+        'validation',
+        title = 'Validation',
+        description = 'Ploud user validation.',
+        default = True),
+
+    ptah.form.BoolField(
+        'devmode',
+        title = 'Development mode',
+        default = False),
+
     title = 'Ploud frontend configuration',
     ttw = True,
 )

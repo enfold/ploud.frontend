@@ -26,7 +26,7 @@
                         </ul>
                     </div>
                 </div><!-- End .access -->
-      
+
                 <div class="global-header">
                     <div class="content-inner">
                         <ul class="global-nav ~hide" tal:condition="not view.isanon">
@@ -60,21 +60,21 @@
     <!-- Main Content Block -->
     <div class="row">
     ${structure: wrapped_content}
-	</div>
+        </div>
     <!-- footer -->
     <footer>
       <div class="footer">
-	<div class="content-inner">
+        <div class="content-inner">
           <p><small class="copyright">&copy; 2011, <a href="http://www.enfoldsystems.com/" rel="external">Enfold Systems</a>, Inc. &mdash; The Plone Experts.</small></p>
           <ul class="inline">
             <li class="terms-of-service"><a href="/terms-of-service.html" class="colorbox modal-cta modal-cta-find:terms-of-service" data-rel="dialog">Terms and Conditions</a></li>
             <li class="privacy-policy"><a href="/privacy-policy.html" class="colorbox modal-cta modal-cta-find:privacy-policy" data-rel="dialog">Privacy Policy</a></li>
           </ul>
-	</div>
+        </div>
       </div><!-- End .footer -->
     </footer>
   </div>
-  
+
   <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-26600834-1']);

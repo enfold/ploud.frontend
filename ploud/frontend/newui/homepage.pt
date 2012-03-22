@@ -21,26 +21,26 @@
   <div class="content-inner clear-fix">
     <div class="intro grid_16 alpha mod mod-login">
       <div class="mod-inner rounded-all dropshadow-generic">
-	<p>You are logged in.  Check out your <a href="/dashboard.html">Dashboard</a>.</p>
+        <p>You are logged in.  Check out your <a href="/dashboard.html">Dashboard</a>.</p>
       </div>
     </div>
   </div>
 </div>
-   
+
 <div id="main-content" class="grid_16 main-content" role="main"
      tal:condition="not isanon">
   <div class="content-inner clear-fix">
-    
+
     <div class="grid_8 alpha mod mod-signup">
       <div class="mod-inner rounded-all dropshadow-generic">
-        
-        <form 
+
+        <form
            id="ploud-signup"
            action="/signup"
            method="post">
-          
+
           <h2>New User? Signup</h2>
-                    
+
           <div class="mod mod-status-message success hide">
             <div class="mod-inner rounded-all">
               <span class="icon"></span>
@@ -58,7 +58,7 @@
               </div>
             </div>
           </div>
-          
+
           <fieldset>
             <legend>Signup Information</legend>
             <div class="field-block email-block clear-fix">
@@ -81,19 +81,19 @@
                 <p>This is the username you will use to log in. It must be a valid e-mail address. <!--Your email address will not be displayed to any user or be shared with anyone else.--></p>
               </div>
             </div>
-            
+
             <div class="field-block sitename-block clear-fix">
               <div class="field-label">
                 <label for="signup-site-name" title="">
                   <span class="req">&bull;</span> Site Name
                 </label>
-              </div>                    
+              </div>
               <div class="field-input">
-                <input 
-                   id="signup-site-name" 
-                   name="signup-site-name" 
-                   class="text rounded-all-inputs dropshadow-input" 
-                   value="" 
+                <input
+                   id="signup-site-name"
+                   name="signup-site-name"
+                   class="text rounded-all-inputs dropshadow-input"
+                   value=""
                    tabindex="5"
                    type="text" />
               </div>
@@ -102,18 +102,18 @@
               </div>
             </div>
 
-	      <div class="field-block clear-fix">
-		<div class="field-label">
+              <div class="field-block clear-fix">
+                <div class="field-label">
                   <label for="signup-site-language">
                     <span class="req">&bull;</span> Site Language
                   </label>
                 </div>
                 <div class="field-input">
-                  <select 
-                     id="signup-site-language" 
-                     class="select" 
+                  <select
+                     id="signup-site-language"
+                     class="select"
                      name="signup-site-language">
-                    
+
                     <option value="en">Select a Language</option>
                     <option tal:repeat="lang languages"
                             value="${lang['code']}"
@@ -134,7 +134,7 @@
                 <input
                    id="signup-accept-toc"
                    name="signup-accept-toc"
-                   class="text rounded-all-inputs dropshadow-input" 
+                   class="text rounded-all-inputs dropshadow-input"
                    value="true"
                    tabindex="5"
                    checked
@@ -143,9 +143,9 @@
               <div class="field-note">
                 <p>By checking this field you are accepting our <a href="/terms-of-service.html">Terms and Conditions</a></p>
               </div>
-	    </div>
+            </div>
           </fieldset><!-- End fieldset -->
-          
+
           <fieldset class="form-controls">
             <legend>Signup Submit</legend>
             <div class="field-block clear-fix clear-fix submit-block">
@@ -163,7 +163,7 @@
             </div>
           </fieldset><!-- End fieldset -->
         </form>
-                
+
       </div>
     </div>
 
@@ -174,9 +174,9 @@
            id="ploud-login"
            action="/login.html"
            method="post">
-                    
+
           <h2>Existing User? Login</h2>
-                    
+
           <div class="mod mod-status-message error hide">
             <div class="mod-inner rounded-all">
               <span class="icon"></span>
@@ -188,7 +188,7 @@
               </div>
             </div>
           </div>
-                    
+
           <fieldset>
             <legend>Login Information</legend>
             <div class="field-block clear-fix clear-fix">
@@ -231,7 +231,7 @@
               </div>
             </div>
           </fieldset><!-- End fieldset -->
-          
+
           <fieldset class="form-controls">
             <legend>Login Submit</legend>
             <div class="field-block clear-fix clear-fix submit-block">
@@ -256,28 +256,28 @@
 </div><!-- End .main-content -->
 
 <div class="modal-content">
-        
+
   <!--
      Each modal must carry with it a container.
     -->
-            
+
   <div id="reset-password" class="mod mod-modal-resetpw container container_16 clear-fix">
     <div class="mod-inner">
-                    
+
       <div class="mod-modal-header">
-        
+
         <h1>Reset Password</h1>
         <div class="accessibility"><a href="/reset-password.html">View</a> as page.</div>
-        
+
       </div>
       <div class="">
-                    
+
         <form
            name=""
            id="ploud-resetpw"
            action="/reset-password.html"
            method="post">
-          
+
           <div class="mod mod-status-message success hide">
             <div class="mod-inner rounded-all">
               <span class="icon"></span>
@@ -289,11 +289,11 @@
               </div>
             </div>
           </div>
-          
+
           <div class="form-description"></div>
-          
+
           <fieldset>
-            
+
             <div class="field-block">
               <div class="field-label">
                 <label for="" title="Enter your e-mail address">
@@ -301,30 +301,30 @@
                 </label>
               </div>
               <div class="field-input">
-                <input 
-                   id="login-email" 
+                <input
+                   id="login-email"
                    name="login-email"
-                   tabindex="1" 
-                   class="text rounded-all-inputs dropshadow-input" 
-                   value="" 
-                   type="text" 
+                   tabindex="1"
+                   class="text rounded-all-inputs dropshadow-input"
+                   value=""
+                   type="text"
                    />
               </div>
               <div class="field-note">
                 <p>Enter your e-mail address.</p>
               </div>
             </div>
-            
+
           </fieldset>
-          
+
           <fieldset class="form-controls">
             <div class="field-block clear-fix">
               <div class="field-input">
-                <button class="button generic no-icon" 
-			value="Reset Password" type="submit">
+                <button class="button generic no-icon"
+                        value="Reset Password" type="submit">
                   Reset Password
                 </button>
-              </div>  
+              </div>
               <div class="field-note">
                 <dl class="legend clear-fix">
                   <dt><span class="req">&bull;</span></dt>

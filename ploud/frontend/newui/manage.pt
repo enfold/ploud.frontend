@@ -6,24 +6,24 @@
   <div class="span16 columns">
     <form method="post" action="${request.url}">
       <fieldset>
-	<legend>Search Users/Sites</legend>
+        <legend>Search Users/Sites</legend>
 
-	<div class="clearfix">
-	  <div class="input">
-	    <input type="text" name="search" 
-		   tal:attributes="value request.params.get('search')" />
-	  </div>
+        <div class="clearfix">
+          <div class="input">
+            <input type="text" name="search"
+                   tal:attributes="value request.params.get('search')" />
+          </div>
       </fieldset>
 
       <div class="actions">
-	<input class="btn" type="submit" 
-	       name="searchusers" value="Search users" />
-	<input class="btn" type="submit" 
-	       name="showusers" value="Show all users" />
-	<input class="btn" type="submit" 
-	       name="searchsites" value="Search sites" />
-	<input class="btn" type="submit" 
-	       name="showsites" value="Show all sites" />
+        <input class="btn" type="submit"
+               name="searchusers" value="Search users" />
+        <input class="btn" type="submit"
+               name="showusers" value="Show all users" />
+        <input class="btn" type="submit"
+               name="searchsites" value="Search sites" />
+        <input class="btn" type="submit"
+               name="showsites" value="Show all sites" />
       </div>
     </form>
   </div>
@@ -34,18 +34,18 @@
     <h3>Total found is ${len(view.users)}</h3>
     <table class="zebra-striped">
       <thead>
-	<tr>
-	  <th>Id</th>
-	  <th>Policy</th>
-	  <th>EMail</th>
-	  <th>Joined</th>
-	</tr>
+        <tr>
+          <th>Id</th>
+          <th>Policy</th>
+          <th>EMail</th>
+          <th>Joined</th>
+        </tr>
       </thead>
       <tr tal:repeat="user view.users">
-	<td><a href="${user.id}/">${user.id}</a></td>
-	<td>${user.type}</td>
-	<td><a href="${user.id}/">${user.email}</a></td>
-	<td>${view.format.datetime(user.join_date)}</td>
+        <td><a href="${user.id}/">${user.id}</a></td>
+        <td>${user.type}</td>
+        <td><a href="${user.id}/">${user.email}</a></td>
+        <td>${view.format.datetime(user.join_date)}</td>
       </tr>
     </table>
   </div>
@@ -56,33 +56,33 @@
     <h3>Total found is ${len(view.sites)}</h3>
     <table class="zebra-striped">
       <thead>
-	<tr>
-	  <th>Id</th>
-	  <th>Site name</th>
-	  <th>User</th>
-	  <th>Type</th>
-	  <th>DB size</th>
-	  <th>Bandwidth</th>
-	  <th>Disabled</th>
-	  <th>Removed</th>
-	  <th>Last accessed</th>
-	  <th>Created</th>
-	</tr>
+        <tr>
+          <th>Id</th>
+          <th>Site name</th>
+          <th>User</th>
+          <th>Type</th>
+          <th>DB size</th>
+          <th>Bandwidth</th>
+          <th>Disabled</th>
+          <th>Removed</th>
+          <th>Last accessed</th>
+          <th>Created</th>
+        </tr>
       </thead>
       <tr tal:repeat="site view.sites">
-	<td><a href="${site.user_id}/">${site.id}</a></td>
-	<td><a href="http://${site.hosts[0].host}/" target="_blank">${site.site_name}</a>
-	  (<b><a title="Login as manager" target="_blank"
-		 href="login?id=${site.id}">Login</a></b>)
-	</td>
-	<td><a href="${site.user_id}/">${getattr(site.User,'email','')}</a></td>
-	<td>${site.typeof}</td>
-	<td>${view.format.size(site.size, 'm')}</td>
-	<td>${view.format.size(site.bwin+site.bwout, 'm')}</td>
-	<td>${str(site.disabled)}</td>
-	<td>${str(site.removed)}</td>
-	<td>${view.format.datetime(site.last_accessed)}</td>
-	<td>${view.format.datetime(site.created)}</td>
+        <td><a href="${site.user_id}/">${site.id}</a></td>
+        <td><a href="http://${site.hosts[0].host}/" target="_blank">${site.site_name}</a>
+          (<b><a title="Login as manager" target="_blank"
+                 href="login?id=${site.id}">Login</a></b>)
+        </td>
+        <td><a href="${site.user_id}/">${getattr(site.User,'email','')}</a></td>
+        <td>${site.typeof}</td>
+        <td>${view.format.size(site.size, 'm')}</td>
+        <td>${view.format.size(site.bwin+site.bwout, 'm')}</td>
+        <td>${str(site.disabled)}</td>
+        <td>${str(site.removed)}</td>
+        <td>${view.format.datetime(site.last_accessed)}</td>
+        <td>${view.format.datetime(site.created)}</td>
       </tr>
     </table>
   </div>

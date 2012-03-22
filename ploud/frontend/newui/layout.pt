@@ -1,5 +1,5 @@
-<!DOCTYPE 
-  html 
+<!DOCTYPE
+  html
   public "✰">
 
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -12,69 +12,69 @@
   <meta name="google-site-verification" content="DtikU1KcTEmIrHz-zl6eu6QWWdPrcSGwi-GfaAXQXrA" />
   <!-- Config -->
   <meta charset="utf-8" />
-  <meta 
-    http-equiv="X-UA-Compatible" 
+  <meta
+    http-equiv="X-UA-Compatible"
     content="IE=edge,chrome=1" />
-  
+
   <!-- Mobile -->
-  <meta 
-    name="HandheldFriendly" 
+  <meta
+    name="HandheldFriendly"
     content="True">
-  <meta 
-    name="MobileOptimized" 
+  <meta
+    name="MobileOptimized"
     content="320"/>
-  <meta 
-    name="viewport" 
-    content="width=device-width"/> 
-  <meta 
-    http-equiv="cleartype" 
+  <meta
+    name="viewport"
+    content="width=device-width"/>
+  <meta
+    http-equiv="cleartype"
     content="on">
-  
+
   <!-- Meta -->
   <title dir="ltr">Ploud</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  
+
   <!-- Icon -->
-  <link 
-    rel="shortcut icon" 
+  <link
+    rel="shortcut icon"
     href="/favicon.ico" />
-  <!--link 
-    rel="apple-touch-icon" 
+  <!--link
+    rel="apple-touch-icon"
     href="/apple-touch-icon.png" /-->
-  
+
   <!-- CSS -->
-  <link 
-    rel="stylesheet" 
-    href="${static}_css-lib/960-Grid-System/code/css/min/compiled.css" 
+  <link
+    rel="stylesheet"
+    href="${static}_css-lib/960-Grid-System/code/css/min/compiled.css"
     media="all" />
   <link
-    rel="stylesheet" 
-    href="${static}_css-lib/colorbox/ploud-ui/colorbox.css" 
+    rel="stylesheet"
+    href="${static}_css-lib/colorbox/ploud-ui/colorbox.css"
     media="all" />
-  <link 
-    rel="stylesheet" 
-    href="${static}_css/global.css" 
+  <link
+    rel="stylesheet"
+    href="${static}_css/global.css"
     media="all" />
 
   <tal:block content="structure view.render_includes()" />
 
-  <!--link 
-    rel="stylesheet" 
+  <!--link
+    rel="stylesheet"
     href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css"
     media="screen and (max-device-width: 480px)" /-->
-  
+
   <!-- Scripts -->
   <script src="${static}_js-lib/modernizr.min.js"></script>
 </head>
 
-<body class="ploud-net" 
+<body class="ploud-net"
   tal:define="path request.path_info.replace('/', '').replace('.html', '');
               static request.static_url('ploud.frontend:assets/')"
   tal:attributes="class python:'ploud-net page-' + path if path else 'ploud-net page-home'">
-  
+
   <div class="container container_16 clear-fix" dir="ltr">
-    
+
     <div class="access accessibly-hide">
       <div class="content-inner">
         <ul>
@@ -82,20 +82,20 @@
         </ul>
       </div>
     </div><!-- End .access -->
-    
+
     <div class="header grid_16">
       <div class="content-inner clear-fix">
         <div class="logo grid_6 alpha">
           <a href="/index.html" title="Ploud"><img src="${static}_img-ui/ploud.png" alt="Ploud"/></a>
           <span class="release-type">Beta</span>
         </div>
-	
-	<div class="mod mod-membership" 
-	     tal:condition="not view.isanon">
+
+        <div class="mod mod-membership"
+             tal:condition="not view.isanon">
           <div class="mod-inner rounded-all dropshadow-generic">
             <span
-	       class="member member-type-1">${view.membership}<span class="rounded-all type">
-		${view.price}/${view.policy.sites} sites</span></span>
+               class="member member-type-1">${view.membership}<span class="rounded-all type">
+                ${view.price}/${view.policy.sites} sites</span></span>
             <div class="member-type-details">
               <h3>${view.policy.title}</h3>
               <p>${view.policy.description}</p>
@@ -114,14 +114,14 @@
                 </tr>
               </table>
             </div>
-            <ul class="member-controls">            
+            <ul class="member-controls">
               <li><a href="/change-password.html" class="colorbox modal-cta modal-cta-find:change-user-password">Change Password</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div><!-- End .header -->
-    
+
     <div class="global-header">
       <div class="content-inner">
         <ul class="global-nav ~hide" tal:condition="not view.isanon">
@@ -135,7 +135,7 @@
 
         <ul class="global-nav ~hide" tal:condition="view.isanon">
           <li class="membership"><a href="/membership.html">Membership</a></li>
-	  <li class="themegallery"><a href="/themes/">Themes</a></li>
+          <li class="themegallery"><a href="/themes/">Themes</a></li>
           <li class="login"><a href="/index.html">Login</a></li>
         </ul>
       </div>
@@ -155,26 +155,26 @@
         </ul>
       </div>
     </div><!-- End .footer -->
-    
+
     <div class="modal-content">
       <!--
          Each modal must carry with it a container.
-	-->
-      
+        -->
+
       <div id="change-user-password" class="mod mod-modal-changepw container container_16 clear-fix">
         <div class="mod-inner">
-          
+
           <div class="mod-modal-header">
             <h1>Change Password</h1>
             <div class="accessibility"><a href="/change-password.html">View</a> as page.</div>
           </div>
-            
-          <div class="mod-modal-content">                
+
+          <div class="mod-modal-content">
             <form
                id="ploud-changepw"
                action="/change-password.html"
                method="post">
-              
+
               <fieldset>
                 <div class="field-block clear-fix">
                   <div class="field-label">
@@ -189,7 +189,7 @@
                        />
                   </div>
                 </div><!-- End .field-block -->
-                
+
                 <div class="field-block clear-fix">
                   <div class="field-label">
                     <label for="confirm-password">Confirm Password</label>
@@ -204,16 +204,16 @@
                     </div>
                 </div><!-- End .field-block -->
               </fieldset>
-              
+
               <fieldset class="form-controls">
                 <div class="field-block clear-fix">
                   <div class="field-input">
-                    <button type="submit" 
-			    name="form-change"
-			    class="button generic no-icon">
+                    <button type="submit"
+                            name="form-change"
+                            class="button generic no-icon">
                       Change Password<span class="icon"></span>
                     </button>
-		  </div>
+                  </div>
                 </div>
               </fieldset>
             </form>
@@ -223,11 +223,11 @@
       <div id="privacy-policy" class="mod mod-modal-pp container container_16 clear-fix">
         <div class="mod-inner">
           <div class="mod-modal-header">
-            
+
             <h1>Privacy Policy</h1>
             <div class="accessibility"><a href="/privacy-policy.html">View</a> as page.</div>
           </div>
-          
+
           <div class="mod-modal-content">
             <p>Enfold Systems, Inc. operates the Ploud website and we respect your right, and your users rights, to personal privacy. We will collect and use information through our Web site only in the ways disclosed in this statement. This statement applies solely to information collected on this Web site.</p>
             <h2>How We Protect Your Information</h2>
@@ -246,20 +246,20 @@
             <p>You may access and edit your own personal information, or contact us at <a href="mailto:customerservice@enfoldsystems.com" title="Send an e-mail message">customerservice@enfoldsystems.com</a> to report any inaccuracies you find.</p>
             <h2>How to Resolve a Problem</h2>
             <p>If a problem arises, please e-mail us at <a href="mailto:customerservice@enfoldsystems.com" title="Send an e-mail message">customerservice@enfoldsystems.com</a>. We are committed to resolving issues within five business days.</p>
-                                                
+
           </div>
         </div>
       </div><!-- End #privacy-policy -->
-            
+
       <div id="terms-of-service" class="mod mod-modal-tos container container_16 clear-fix">
         <div class="mod-inner">
           <div class="mod-modal-header">
-                    
+
             <h1>Terms and Conditions</h1>
             <div class="accessibility"><a href="/terms-of-service.html">View</a> as page.</div>
           </div>
           <div class="mod-modal-content">
-                    
+
             <p>Welcome to Ploud, operated by Enfold Systems, Inc (“Enfold”). &nbsp;The terms set forth below (the “Agreement”) govern your use of Ploud. By using or operating on Ploud, you expressly agree to be bound by this Agreement and to follow all of its terms and any applicable laws and regulations. &nbsp;If you do not agree with any of the following terms, immediately discontinue your use of Ploud. &nbsp;If you have any questions about these Terms and Conditions, contact <a href="mailto:ploud@enfoldsystems.com">ploud@enfoldsystems.com</a>.</p>
             <ol>
               <li>You understand and acknowledge that Ploud is being provided to you “AS IS” and “AS AVAILABLE”, for the purpose of evaluation and testing. &nbsp;Your use of the Ploud is entirely at your own risk. &nbsp;Enfold reserves the right to modify, suspend or stop Ploud (or any part thereof), either temporarily or permanently, at any time, or from time to time, with or without notice to you.</li>
@@ -291,7 +291,7 @@
               <li>This Agreement shall be governed by the laws of the State of Texas without regard to the conflicts of law provisions of any other jurisdiction. &nbsp;Jurisdiction and venue for all disputes arising under this Agreement shall be in a court of competent jurisdiction in Harris County, Texas U.S.A.</li>
             </ol>
           </div>
-          
+
           <div class="mod-modal-controls hide">
             <ul>
               <li>
@@ -303,24 +303,24 @@
           </div>
         </div>
       </div><!-- End #terms-of-service -->
-            
+
       <!-- Additional Modal Content -->
     </div><!-- End .modal-content -->
   </div> <!-- End #container -->
-  
+
   <script>
-  
+
     Modernizr.load([
       {
         load: '${static}_js-lib/jquery.min.js',
         complete: function () {
-        
+
           Modernizr.load('${static}_js-lib/jquery.colorbox-min.js');
           Modernizr.load('${static}_js-lib/jquery.metadata.js');
           Modernizr.load('${static}_js-lib/jquery.validate.min.js');
           Modernizr.load('${static}_js-lib/additional-methods.min.js');
           Modernizr.load('${static}_js/global.js');
-          
+
         }
       }
     ]);

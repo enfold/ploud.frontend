@@ -104,6 +104,11 @@ def provision_site(user, site_type, site_name, template_id='', language='en'):
     addVirtualHosts((str(hostname),), 'plone41')
     POLICIES[user.type].changeHostsPolicy((hostname,), site_name)
 
+    FE = ptah.get_settings('frontend')
+    if FE['devmode']:
+        transaction.commit()
+        return site
+
     # Create the database.
     conn = ploud_config.CLIENTS_POOL.getconn()
     try:

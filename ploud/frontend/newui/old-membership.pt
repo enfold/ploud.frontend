@@ -1,8 +1,8 @@
 <div id="main-content" class="grid_16 main-content" role="main">
   <div class="content-inner clear-fix">
-    
+
     <h1>Membership Options</h1>
-    
+
     <table class="mod mod-membership-table">
       <thead>
         <tr>
@@ -17,14 +17,14 @@
           </th>
         </tr>
       </thead>
-            
+
       <tbody>
         <tr class="cta">
           <td class="type-0">
             <a name="googlecheckout0">
               <div class="cost clear-fix">
                 <div class="rate grid_2 alpha">$0/<abbr title="Monthly">mo</abbr></div>
-                <div class="sites grid_2 omega">X sites</div> 
+                <div class="sites grid_2 omega">X sites</div>
               </div>
               <img
                  alt="Not available for these items"
@@ -38,7 +38,7 @@
                   <th class="detail">Detail</th>
                 </tr>
               </thead>
-              
+
               <tbody>
                 <tr>
                   <td class="feature">Feature X</td>
@@ -61,67 +61,67 @@
           </td>
           <td class="type-1">
             <a name="googlecheckout1">
-	      <div class="cost clear-fix">
-		<div class="rate grid_2 alpha">$15/<abbr title="Monthly">mo</abbr></div>
-		<div class="sites grid_2 omega">X sites</div> 
+              <div class="cost clear-fix">
+                <div class="rate grid_2 alpha">$15/<abbr title="Monthly">mo</abbr></div>
+                <div class="sites grid_2 omega">X sites</div>
               </div>
 
 <form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/107858606392321" method="post">
-    <input name="item_name_1" type="hidden" 
-	   value="Ploud.com membership subscription for user ${email}"/>
+    <input name="item_name_1" type="hidden"
+           value="Ploud.com membership subscription for user ${email}"/>
     <input name="item_description_1" type="hidden" value=""/>
     <input name="item_quantity_1" type="hidden" value="1"/>
     <input name="item_price_1" type="hidden" value="0.0"/>
     <input name="item_currency_1" type="hidden" value="USD"/>
 
-    <input name="shopping-cart.items.item-1.subscription.type" 
-	   type="hidden"
-	   value="google" />
-    
-    <input name="shopping-cart.items.item-1.subscription.period" 
-	   type="hidden"
-	   value="MONTHLY" />
+    <input name="shopping-cart.items.item-1.subscription.type"
+           type="hidden"
+           value="google" />
+
+    <input name="shopping-cart.items.item-1.subscription.period"
+           type="hidden"
+           value="MONTHLY" />
 
     <input name="shopping-cart.items.item-1.subscription.payments.subscription-payment-1.maximum-charge"
-	   type="hidden" 
-	   value="15.00">
+           type="hidden"
+           value="15.00">
 
     <input name="shopping-cart.items.item-1.subscription.payments.subscription-payment-1.maximum-charge.currency"
-	   type="hidden"
-	   value="USD">
+           type="hidden"
+           value="USD">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-name"
-	   type="hidden"
-	   value="Monthly payment for Ploud.com service.">
+           type="hidden"
+           value="Monthly payment for Ploud.com service.">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-description" type="hidden" 
-	   value="Your flat charge for useing ploud.com service">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-description" type="hidden"
+           value="Your flat charge for useing ploud.com service">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.quantity"
-	   type="hidden" 
-	   value="1">
+           type="hidden"
+           value="1">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price"
-	   type="hidden" 
-	   value="15.00">
+           type="hidden"
+           value="15.00">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price.currency" type="hidden" 
-	   value="USD">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price.currency" type="hidden"
+           value="USD">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.display-disposition" type="hidden" 
-	   value="OPTIMISTIC">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.display-disposition" type="hidden"
+           value="OPTIMISTIC">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.url" type="hidden"
-	   value="http://ploud.com">
+           value="http://ploud.com">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.description" type="hidden" 
-	   value="Plone on the cloud service.">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.description" type="hidden"
+           value="Plone on the cloud service.">
 
     <input name="shopping-cart.items.item-1.digital-content.display-disposition" type="hidden"
-	   value="OPTIMISTIC">
+           value="OPTIMISTIC">
 
     <input name="shopping-cart.items.item-1.digital-content.description" type="hidden"
-	   value="Congratulations! Your subscription is being set up.">
+           value="Congratulations! Your subscription is being set up.">
 
     <input name="_charset_" type="hidden" value="utf-8"/>
 
@@ -158,67 +158,67 @@
           </td>
           <td class="type-2">
             <a name="googlecheckout2">
-	      <div class="cost clear-fix">
-		<div class="rate grid_2 alpha">$50/<abbr title="Monthly">mo</abbr></div>
-		<div class="sites grid_2 omega">X sites</div> 
+              <div class="cost clear-fix">
+                <div class="rate grid_2 alpha">$50/<abbr title="Monthly">mo</abbr></div>
+                <div class="sites grid_2 omega">X sites</div>
               </div>
-              
+
 <form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/107858606392321" method="post">
-    <input name="item_name_1" type="hidden" 
-	   value="Ploud.com membership subscription for user ${email}"/>
+    <input name="item_name_1" type="hidden"
+           value="Ploud.com membership subscription for user ${email}"/>
     <input name="item_description_1" type="hidden" value=""/>
     <input name="item_quantity_1" type="hidden" value="1"/>
     <input name="item_price_1" type="hidden" value="0.0"/>
     <input name="item_currency_1" type="hidden" value="USD"/>
 
-    <input name="shopping-cart.items.item-1.subscription.type" 
-	   type="hidden"
-	   value="google" />
-    
-    <input name="shopping-cart.items.item-1.subscription.period" 
-	   type="hidden"
-	   value="MONTHLY" />
+    <input name="shopping-cart.items.item-1.subscription.type"
+           type="hidden"
+           value="google" />
+
+    <input name="shopping-cart.items.item-1.subscription.period"
+           type="hidden"
+           value="MONTHLY" />
 
     <input name="shopping-cart.items.item-1.subscription.payments.subscription-payment-1.maximum-charge"
-	   type="hidden" 
-	   value="50.00">
+           type="hidden"
+           value="50.00">
 
     <input name="shopping-cart.items.item-1.subscription.payments.subscription-payment-1.maximum-charge.currency"
-	   type="hidden"
-	   value="USD">
+           type="hidden"
+           value="USD">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-name"
-	   type="hidden"
-	   value="Monthly payment for Ploud.com service.">
+           type="hidden"
+           value="Monthly payment for Ploud.com service.">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-description" type="hidden" 
-	   value="Your flat charge for useing ploud.com service">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.item-description" type="hidden"
+           value="Your flat charge for useing ploud.com service">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.quantity"
-	   type="hidden" 
-	   value="1">
+           type="hidden"
+           value="1">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price"
-	   type="hidden" 
-	   value="50.00">
+           type="hidden"
+           value="50.00">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price.currency" type="hidden" 
-	   value="USD">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.unit-price.currency" type="hidden"
+           value="USD">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.display-disposition" type="hidden" 
-	   value="OPTIMISTIC">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.display-disposition" type="hidden"
+           value="OPTIMISTIC">
 
     <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.url" type="hidden"
-	   value="http://ploud.com">
+           value="http://ploud.com">
 
-    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.description" type="hidden" 
-	   value="Plone on the cloud service.">
+    <input name="shopping-cart.items.item-1.subscription.recurrent-item.digital-content.description" type="hidden"
+           value="Plone on the cloud service.">
 
     <input name="shopping-cart.items.item-1.digital-content.display-disposition" type="hidden"
-	   value="OPTIMISTIC">
+           value="OPTIMISTIC">
 
     <input name="shopping-cart.items.item-1.digital-content.description" type="hidden"
-	   value="Congratulations! Your subscription is being set up.">
+           value="Congratulations! Your subscription is being set up.">
 
     <input name="_charset_" type="hidden" value="utf-8"/>
 
@@ -226,7 +226,7 @@
            src="https://checkout.google.com/buttons/checkout.gif?merchant_id=107858606392321&w=160&h=43&style=white&variant=text&loc=en_US" type="image" />
 </form>
 
-	    </a>
+            </a>
             <table class="features-table">
               <thead>
                 <tr>

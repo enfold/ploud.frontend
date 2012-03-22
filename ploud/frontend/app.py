@@ -48,6 +48,9 @@ def main(global_config, **settings):
     # enable ptah manage
     config.ptah_init_manage()
 
+    # populate db
+    config.ptah_populate()
+
     # frontend routes
     config.add_route(
         'login', '/sso-login/{site}/', use_global_views=True)

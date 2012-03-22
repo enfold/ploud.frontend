@@ -69,46 +69,52 @@ def validate_signup(request):
 
 @view_config('signup', context=PloudApplicationRoot)
 def SignupView(request):
-        PLOUD = ptah.get_settings('ploud', request.registry)
-        allowed = PLOUD['registration']
-        if not allowed:
-            return HTTPFound(location = '/waitinglist.html')
+    PLOUD = ptah.get_settings('ploud', request.registry)
+    allowed = PLOUD['registration']
+    if not allowed:
+        return HTTPFound(location = '/waitinglist.html')
 
-        principal = authenticated_userid(request)
-        if principal:
-            return HTTPFound(location = '/dashboard.html')
+    principal = authenticated_userid(request)
+    if principal:
+        return HTTPFound(location = '/dashboard.html')
 
-        errors, data = validate_signup(request)
-        print errors, data
-        if errors:
-            return HTTPFound(location='/index.html')
+    errors, data = validate_signup(request)
+    if errors:
+        return HTTPFound(location='/index.html')
 
-        email = data['signup-email']
-        site_name = data['signup-site-name']
-        site_language = data['signup-site-language']
-        password = ''.join(
-            random.choice(ALLOWED_SITE_NAME_CHARS) for i in range(8))
+    email = data['signup-email']
+    site_name = data['signup-site-name']
+    site_language = data['signup-site-language']
+    password = ''.join(
+        random.choice(ALLOWED_SITE_NAME_CHARS) for i in range(8))
 
-        user = User(email, ptah.pwd_tool.encode(password), 98)
-        token = user.token
-        Session = ptah.get_session()
-        Session.add(user)
-        Session.flush()
+    user = User(email, ptah.pwd_tool.encode(password), 98)
+    token = user.token
+    Session = ptah.get_session()
+    Session.add(user)
+    Session.flush()
 
-        uri = user.__uri__
+    uri = user.__uri__
 
+    FE = ptah.get_settings('frontend', request.registry)
+
+    if FE['validation']:
         send_activation(email, token)
+    else:
+        user.type = 0
+        user.token = None
+        user.validated = datetime.datetime.now()
 
-        try:
-            utils.provision_site(user, 'plone41', site_name, language=site_language)
-        except Exception, exc:
-            transaction.abort()
-            errors = {'signup-site-name': str(exc)}
-            log.exception('Site provision problem')
-            return HTTPFound(location='/index.html')
+    try:
+        utils.provision_site(user, 'plone41', site_name, language=site_language)
+    except Exception, exc:
+        transaction.abort()
+        errors = {'signup-site-name': str(exc)}
+        log.exception('Site provision problem')
+        return HTTPFound(location='/index.html')
 
-        headers = remember(request, uri)
-        return HTTPFound(location='/dashboard.html', headers=headers)
+    headers = remember(request, uri)
+    return HTTPFound(location='/dashboard.html', headers=headers)
 
 
 @view_config(route_name='validate')

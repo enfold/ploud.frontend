@@ -3,71 +3,71 @@
     <div class="grid_12 alpha mod mod-login">
       <div class="mod-inner rounded-all dropshadow-generic">
 
-	<form id="ploud-changehostname"
-	      action="${request.url}"
-	      method="post">
-	  
-	  <h1>Change Hostname for ${view.host}</h1>
+        <form id="ploud-changehostname"
+              action="${request.url}"
+              method="post">
+
+          <h1>Change Hostname for ${view.host}</h1>
 
           <p>
           Enter your hostname, e.g. www.enfoldsystems.com. <br />
           You will need your DNS record to point to 64.18.223.248.
           </p>
 
-	  <div class="mod mod-status-message success hide">
+          <div class="mod mod-status-message success hide">
             <div class="mod-inner rounded-all">
               <span class="icon"></span>
               <div class="status-header">
-		<h3>Status Message</h3>
+                <h3>Status Message</h3>
               </div>
               <div class="status-content">
-		<p tal:content="view.message or request.params.get('message')">Status message</p>
+                <p tal:content="view.message or request.params.get('message')">Status message</p>
               </div>
             </div>
-	  </div>  
-	  
-	  <div class="form-description"></div>
-          
-	  <fieldset>
+          </div>
+
+          <div class="form-description"></div>
+
+          <fieldset>
             <div class="field-block clear-fix">
               <div class="field-label">
-		<label for="" title="Enter host name">
-		  <span class="req">&bull;</span> Host Name
-		</label>
+                <label for="" title="Enter host name">
+                  <span class="req">&bull;</span> Host Name
+                </label>
               </div>
               <div class="field-input">
-		<input 
-		   id="change-hostname"
-		   name="hostname"
-		   tabindex="1" 
-		   class="text rounded-all-inputs dropshadow-input"
-		   value="${request.POST.get('hostname', view.host)}"
-		   type="text" />
+                <input
+                   id="change-hostname"
+                   name="hostname"
+                   tabindex="1"
+                   class="text rounded-all-inputs dropshadow-input"
+                   value="${request.POST.get('hostname', view.host)}"
+                   type="text" />
               </div>
               <div class="field-note">
-		<p>Enter new host name.</p>
+                <p>Enter new host name.</p>
               </div>
             </div>
-	  </fieldset>
-	  
-	  <fieldset class="form-controls">
+          </fieldset>
+
+          <fieldset class="form-controls">
             <div class="field-block clear-fix">
               <div class="field-input">
-		<button class="button generic no-icon"
-			name="form-change"
-			value="Change Hostname" type="submit">
-		  Change Hostname
-		</button>
-              </div>  
+                <button class="button generic no-icon"
+                        name="form-change"
+                        value="Change Hostname" type="submit">
+                  Change Hostname
+                </button>
+              </div>
               <div class="field-note">
-		<dl class="legend clear-fix">
-		  <dt><span class="req">&bull;</span></dt>
-		  <dd>denotes a required field.</dd>
-		</dl>
+                <dl class="legend clear-fix">
+                  <dt><span class="req">&bull;</span></dt>
+                  <dd>denotes a required field.</dd>
+                </dl>
               </div>
             </div>
-	  </fieldset>
-	</form>
+          </fieldset>
+        </form>
       </div>
     </div>
   </div>

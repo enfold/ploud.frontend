@@ -90,7 +90,7 @@
                     </div>
 
                     <form id="ploud-createsite"
-                          action="/dashboard.html" 
+                          action="/dashboard.html"
                           method="post" tal:condition="allowCreate">
                         <h2>Create a New Site</h2>
 
@@ -112,63 +112,63 @@
                                 <label for="createsite-site-name" title="">
                                     <span class="req">&bull;</span> Site Name
                                 </label>
-                            </div>                    
+                            </div>
                             <div class="field-input">
-                  <input 
-                     id="createsite-site-name" 
-                     name="createsite-site-name" 
-                     class="text rounded-all-inputs dropshadow-input" 
-                     value="${request.POST.get('createsite-site-name')}" 
+                  <input
+                     id="createsite-site-name"
+                     name="createsite-site-name"
+                     class="text rounded-all-inputs dropshadow-input"
+                     value="${request.POST.get('createsite-site-name')}"
                      type="text" />
                 </div>
                 <div class="field-note">
                   <p><span class="as-subdomain">.ploud.com</p>
-		</div>
-		<label for="createsite-site-name" class="error"
-		       tal:condition="'createsite-site-name' in view.status">
-		  ${view.status['createsite-site-name']}
-		</label>
-	      </div>
-	      
-	      <div class="field-block clear-fix">
-		<div class="field-label">
+                </div>
+                <label for="createsite-site-name" class="error"
+                       tal:condition="'createsite-site-name' in view.status">
+                  ${view.status['createsite-site-name']}
+                </label>
+              </div>
+
+              <div class="field-block clear-fix">
+                <div class="field-label">
                   <label for="site-type">
                     <span class="req">&bull;</span> Site Type
                   </label>
                 </div>
                 <div class="field-input">
-                  <select 
-                     id="createsite-site-type" 
-                     class="select" 
+                  <select
+                     id="createsite-site-type"
+                     class="select"
                      name="createsite-site-type"
-		     tal:define="val request.POST.get('createsite-site-type')">
-                    
+                     tal:define="val request.POST.get('createsite-site-type')">
+
                     <option value="">Select a Site Type</option>
-		    <option tal:repeat="st view.siteChoices()"
-			    value="${st[0]}"
-			    tal:attributes="selected st[0] == val">
-		      ${st[1]}</option>
+                    <option tal:repeat="st view.siteChoices()"
+                            value="${st[0]}"
+                            tal:attributes="selected st[0] == val">
+                      ${st[1]}</option>
                   </select>
                 </div>
-		<label for="createsite-site-type" class="error"
-		       tal:condition="'createsite-site-type' in view.status">
-		  ${view.status['createsite-site-type']}
-		</label>
+                <label for="createsite-site-type" class="error"
+                       tal:condition="'createsite-site-type' in view.status">
+                  ${view.status['createsite-site-type']}
+                </label>
               </div>
 
-	      <div class="field-block clear-fix">
-		<div class="field-label">
+              <div class="field-block clear-fix">
+                <div class="field-label">
                   <label for="site-language">
                     <span class="req">&bull;</span> Language
                   </label>
                 </div>
                 <div class="field-input">
-                  <select 
-                     id="createsite-site-language" 
-                     class="select" 
+                  <select
+                     id="createsite-site-language"
+                     class="select"
                      name="createsite-site-language"
-		     tal:define="val request.POST.get('createsite-site-language')">
-                    
+                     tal:define="val request.POST.get('createsite-site-language')">
+
                     <option value="en">Select a Language</option>
                     <option tal:repeat="lang view.languageChoices()"
                             value="${lang['code']}"
@@ -177,10 +177,10 @@
                     </option>
                   </select>
                 </div>
-		<label for="createsite-site-language" class="error"
-		       tal:condition="'createsite-site-language' in view.status">
-		  ${view.status['createsite-site-language']}
-		</label>
+                <label for="createsite-site-language" class="error"
+                       tal:condition="'createsite-site-language' in view.status">
+                  ${view.status['createsite-site-language']}
+                </label>
               </div>
 
             </fieldset>
@@ -189,7 +189,7 @@
               <div class="field-block clear-fix clear-fix submit-block">
                 <div class="field-input">
                   <button type="submit" class="button generic no-icon small-caps"
-			  name="form-create-site" value="1">
+                          name="form-create-site" value="1">
                     Create Site<span class="icon"></span>
                   </button>
                 </div>
@@ -205,46 +205,46 @@
 
         </div>
       </div><!-- End .mod-create-site -->
-      
+
     </div><!-- Column 1 -->
 
-    <div class="grid_8 omega" 
+    <div class="grid_8 omega"
       tal:attributes="class python:'grid_8 omega' if allowCreate else 'grid_8 alpha'">
-      
+
       <div class="grid_8 alpha mod mod-existing-sites">
         <div class="mod-inner rounded-all dropshadow-generic">
-          
+
           <h2>Your Existing Sites</h2>
-                      
+
           <table class="mod mod-sites-stats">
             <tbody>
               <tr class="sites-db-usage">
                 <th>Total Database:</th>
-		<td>${stats['db']} (${stats['db_pc']}% of ${stats['db_to']})</td>
+                <td>${stats['db']} (${stats['db_pc']}% of ${stats['db_to']})</td>
               </tr>
               <tr class="sites-bw-usage">
                 <th>Total Bandwidth:</th>
-		<td>${stats['bw']} (${stats['bw_pc']}% of ${stats['bw_to']})</td>
+                <td>${stats['bw']} (${stats['bw_pc']}% of ${stats['bw_to']})</td>
               </tr>
               <tr class="sites-vhost hide">
                 <th>Virtual hosts:</th>
-		<td><tal:block content="python:stats['vhosts'] and 'Supported' or 'Disabled'"/></td>
+                <td><tal:block content="python:stats['vhosts'] and 'Supported' or 'Disabled'"/></td>
               </tr>
               <tr class="sites-bots hide">
                 <th>Search bots:</th>
-		<td><tal:block content="python:stats['bots'] and 'Supported' or 'Disabled'"/></td>
+                <td><tal:block content="python:stats['bots'] and 'Supported' or 'Disabled'"/></td>
               </tr>
             </tbody>
           </table>
-          
+
           <p class="hide">If you have vhost controls, set vhost domain to <span class="domain">209.143.152.138</span>.</p>
-                
+
           <ul>
             <li class="site clear-fix" tal:repeat="info urls">
               <div class="site-info">
-		<a class="site-address rounded-all-half" 
-		   href="${info['url']}"
-		   style="${info['disabled'] and 'text-decoration: line-through;;' or 'weight: bold'}">${info['url']}</a>
+                <a class="site-address rounded-all-half"
+                   href="${info['url']}"
+                   style="${info['disabled'] and 'text-decoration: line-through;;' or 'weight: bold'}">${info['url']}</a>
                 <table class="mod mod-site-stats">
                   <tr class="site-size">
                     <th>Size:</th>
@@ -256,7 +256,7 @@
                   </tr>
                 </table>
               </div>
-              
+
               <div class="site-actions">
                 <fieldset>
                   <ul class="inline">
@@ -265,7 +265,7 @@
                       class="button generic icon-login no-icon iconish" title="Login using your ploud.com Account">
                       Login<span class="icon"></span>
                       </button-->
-                      <a target="_blank" 
+                      <a target="_blank"
                       href="/actions.html/login?site_id=${info['id']}" class="button generic icon-login no-icon iconish">
                       Login<span class="icon"></span>
                       </a>
@@ -274,63 +274,63 @@
                       <a href="#options" class="button generic icon-options icon-tiny iconish" title="Options"><span class="icon"></span></a>
                       <div class="site-actions-menu">
                         <span class="header">Options</span>
-                        <span class="close rounded-circular">x</span>                                                    
+                        <span class="close rounded-circular">x</span>
                         <ul class="menu">
                           <li><a href="/changehostname.html?site=${info['id']}"
-				 class="${view.allowChangehost and 'action_change colorbox modal-cta modal-cta-find:change-name-1' or 'action_change colorbox disabled-anchor modal-cta modal-cta-find:change-name-1'}"
-				 title="Change the host name of this site">Change host name</a></li>
+                                 class="${view.allowChangehost and 'action_change colorbox modal-cta modal-cta-find:change-name-1' or 'action_change colorbox disabled-anchor modal-cta modal-cta-find:change-name-1'}"
+                                 title="Change the host name of this site">Change host name</a></li>
                           <li><a site="${info['id']}"
-				 href="${info['url']}"
-				 class="${view.allowTransfer and 'action_transfer colorbox modal-cta modal-cta-find:transfer-1' or 'action_transfer colorbox disabled-anchor modal-cta modal-cta-find:transfer-1'}" 
-				 title="Transfer ownership of this site">Transfer</a></li>
+                                 href="${info['url']}"
+                                 class="${view.allowTransfer and 'action_transfer colorbox modal-cta modal-cta-find:transfer-1' or 'action_transfer colorbox disabled-anchor modal-cta modal-cta-find:transfer-1'}"
+                                 title="Transfer ownership of this site">Transfer</a></li>
                           <li><a site="${info['id']}"
-				 href="${info['url']}"
-				 class="${view.allowRemove and 'action_remove colorbox modal-cta modal-cta-find:remove-1' or 'action_remove colorbox disabled-anchor modal-cta modal-cta-find:remove-1'}" title="Remove this site">Remove</a></li>
+                                 href="${info['url']}"
+                                 class="${view.allowRemove and 'action_remove colorbox modal-cta modal-cta-find:remove-1' or 'action_remove colorbox disabled-anchor modal-cta modal-cta-find:remove-1'}" title="Remove this site">Remove</a></li>
                         </ul>
-		      </div>
+                      </div>
                     </li>
                   </ul>
                 </fieldset>
-	      </div>
-	    </li>
-	  </ul>
-	</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div><!-- End .mod-existing-sites -->
-      
+
     </div><!-- Column 2 -->
-      
+
   </div>
 </div><!-- End .main-content -->
 
-       
+
 <!-- Additional Modal content -->
 <div class="modal-content">
 
   <div id="change-name-1" class="mod mod-modal-changename container container_16 clear-fix">
     <div class="mod-inner">
-      
+
       <div class="mod-modal-header">
         <h1>Change Site Name</h1>
       </div>
       Enter your hostname, e.g. www.enfoldsystems.com. <br />
       You will need your DNS record to point to 64.18.223.248.
-      <div class="mod-modal-content">                
-	<form
+      <div class="mod-modal-content">
+        <form
            id="ploud-changenameofsite"
            name=""
            action="/changehostname.html"
            method="post">
-          
+
           <fieldset>
-            
+
             <div class="field-block clear-fix">
               <div class="field-label">
-		<label for="changenameofsite-sitename">
+                <label for="changenameofsite-sitename">
                   <span class="req">&bull;</span> Site Name
-		</label>
+                </label>
               </div>
               <div class="field-input">
-		<input
+                <input
                    id="change-hostname"
                    name="hostname"
                    class="text rounded-all-inputs dropshadow-input"
@@ -340,42 +340,42 @@
               </div>
             </div><!-- End .field-block -->
           </fieldset>
-          
+
           <fieldset class="form-controls">
             <div class="field-block clear-fix clear-fix submit-block">
               <div class="field-input">
-		<button type="submit"
+                <button type="submit"
                 name="form-change"
                 class="button generic no-icon small-caps">
                   Change Name<span class="icon"></span>
-		</button>
+                </button>
               </div>
               <div class="field-note">
-		<dl class="legend clear-fix">
+                <dl class="legend clear-fix">
                   <dt><span class="req">&bull;</span></dt>
                   <dd>denotes a required field.</dd>
-		</dl>
+                </dl>
               </div>
             </div>
           </fieldset><!-- End fieldset -->
-          
-	</form>
+
+        </form>
       </div>
-      
+
     </div>
   </div><!-- End .mod-modal-changename -->
-  
+
 <div id="remove-1" class="mod mod-modal-remove container container_16 clear-fix">
   <div class="mod-inner">
     <div class="mod-modal-header">
-      
+
       <h1>Remove this site <span class="sitename"></span>?</h1>
     </div>
-    
+
     <div class="mod-modal-content">
       <form action="/actions.html/remove" id="ploud-removesite" method="post">
-	<input id="ploud-remove-site" type="hidden" name="site_id" />
-        
+        <input id="ploud-remove-site" type="hidden" name="site_id" />
+
         <fieldset class="form-controls">
           <div class="field-block clear-fix clear-fix submit-block">
             <div class="field-input">
@@ -392,19 +392,19 @@
 
 <div id="transfer-1" class="mod mod-modal-transfer container container_16 clear-fix">
   <div class="mod-inner">
-    
+
     <div class="mod-modal-header">
       <h1>Transfer</h1>
     </div>
-    
+
     <div class="mod-modal-content">
       <form
          id="ploud-transfer"
          name=""
          action="/actions.html/transfer"
          method="post">
-	<input id="ploud-transfer-site" type="hidden" name="site_id" />
-        
+        <input id="ploud-transfer-site" type="hidden" name="site_id" />
+
         <fieldset>
           <div class="field-block clear-fix">
             <div class="field-label">
@@ -425,14 +425,14 @@
               <p>Enter the e-mail account of this site's new owner.</p>
             </div>
           </div><!-- End .field-block -->
-          
+
         </fieldset>
-        
+
         <fieldset class="form-controls">
           <div class="field-block clear-fix clear-fix submit-block">
             <div class="field-input">
               <button type="submit" class="button generic no-icon small-caps"
-		      name="trasfer-submit">
+                      name="trasfer-submit">
                 Transfer Ownership<span class="icon"></span>
               </button>
             </div>
@@ -444,10 +444,10 @@
             </div>
           </div>
         </fieldset><!-- End fieldset -->
-        
+
       </form>
     </div>
-    
+
   </div>
 </div><!-- End .mod-modal-transfer -->
 

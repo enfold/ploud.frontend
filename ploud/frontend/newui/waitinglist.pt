@@ -1,6 +1,6 @@
 <div>
   <h3>Registration disabled.</h3>
-  <p>Registration is currently disabled.  
+  <p>Registration is currently disabled.
     Sign up to get on the waiting list.</p>
 </div>
 
@@ -9,10 +9,10 @@
   <p>
     Registration will be extended to users who signup in
     order in which their submissions were received.  Sign up
-    and you will be on the waiting list to register to 
+    and you will be on the waiting list to register to
     create Plone sites
   </p>
-  
+
   <form action="/waitinglist.html" method="post">
     <fieldset>
       <ul>
